@@ -1,0 +1,13 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: home-assistant
+    image: homeassistant/odroid-c2-homeassistant
+    volumes:
+      - /opt/docker_data/ha_config:/config
+    devices:
+      - /dev/ttyS0:/dev/ttyACM0
+    environment:
+      - TZ=Europe/Madrid
+    restart: always
+    network_mode: host
