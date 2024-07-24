@@ -15,9 +15,9 @@ services:
       WEBPASSWORD: 'peatonet'
     # Volumes store your data between container upgrades
     volumes:
-      - './etc-pihole/:/etc/pihole/'
-      - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
-      - '/mnt/backups:/backups'
+      - '/mnt/sd/pihole/etc-pihole/:/etc/pihole/'
+      - '/mnt/sd/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+      - '/mnt/sd/pihole/backups:/backups'
     dns:
       - 127.0.0.1
       - 1.1.1.1
