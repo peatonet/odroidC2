@@ -17,7 +17,7 @@ services:
     volumes:
       - './etc-pihole/:/etc/pihole/'
       - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
-      - /mnt/backups:/backups
+      - '/mnt/backups:/backups'
     dns:
       - 127.0.0.1
       - 1.1.1.1
