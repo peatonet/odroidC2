@@ -18,6 +18,10 @@ services:
       - './etc-pihole/:/etc/pihole/'
       - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
       - /mnt/backups:/backups
+    dns:
+      - 127.0.0.1
+      - 1.1.1.1
+      - 8.8.8.8
     # Recommended but not required (DHCP needs NET_ADMIN)
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     cap_add:
