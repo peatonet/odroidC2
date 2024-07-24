@@ -1,9 +1,9 @@
-version: "3"
 # More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
 services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
+    command: [ "curl -sSL https://github.com/arevindh/pihole-speedtest/raw/master/test | sudo bash -s -- -o ~/speedtest.db" ]
     ports:
       - "53:53/tcp"
       - "53:53/udp"
