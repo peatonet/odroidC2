@@ -7,9 +7,10 @@ services:
       - SYS_MODULE
     environment:
       - LANG=es
-      - PASSWORD=test
+      - PASSWORD=peatonet
+      - WG_ALLOWED_IPS=192.168.1.0/24
       - WG_DEFAULT_DNS=192.168.1.10
-      - WG_HOST=93.176.136.203
+      - WG_HOST=xabolo.duckdns.org
       - WG_PORT=51820
     ports:
       - 51820:51820/udp
