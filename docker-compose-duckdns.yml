@@ -1,0 +1,15 @@
+services:
+  duckdns:
+    image: linuxserver/duckdns
+    container_name: duckdns
+    network_mode: host
+    environment:
+      - PUID=1000 #optional
+      - PGID=1000 #optional
+      - TZ=Europe/Madrid
+      - SUBDOMAINS=chabola,amonaco
+      - TOKEN=edd5f99f-ad5f-48ff-8f05-69071528461b
+      - LOG_FILE=true #optional
+    volumes:
+      - ./config:/config #optional
+    restart: unless-stopped
