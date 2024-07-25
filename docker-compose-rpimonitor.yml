@@ -1,0 +1,16 @@
+services:
+  rpi-monitor:
+    image: michaelmiklis/rpi-monitor:latest
+    container_name: rpi-monitor
+    environment:
+      TZ: 'Europe/Madrid'
+    volumes:
+      - /opt/vc:/opt/vc
+      - /boot:/boot
+      - /sys:/dockerhost/sys:ro
+      - /etc:/dockerhost/etc:ro
+      - /proc:/dockerhost/proc:ro
+      - /usr/lib:/dockerhost/usr/lib:ro
+    restart: unless-stopped
+    ports:
+      - 8888:8888
