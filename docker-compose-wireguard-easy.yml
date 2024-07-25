@@ -10,7 +10,7 @@ services:
       - PASSWORD=peatonet
       - WG_ALLOWED_IPS=192.168.1.0/24
       - WG_DEFAULT_DNS=192.168.1.10
-      - WG_HOST=peatonet.duckdns.org
+      - WG_HOST=domain/ip
       - WG_PORT=51820
     ports:
       - 51820:51820/udp
